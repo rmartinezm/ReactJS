@@ -1,21 +1,33 @@
 import React, { Component } from 'react';
-import logoReact from './images/react-logo.png';
+import { Provider } from 'react-redux';
+import LoginComponent  from './components/login-component/LoginComponent'
+import configureStore from './store/configureStore'
+import logoReact from './assets/img/react-logo.png';
 import './App.css';
 
+// Inicialización del Store
+const store = configureStore();
+
 class App extends Component {
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <div>
-            <img src={logoReact} className="rotateLogoReact" alt="logo" />
+      <Provider store={store}>
+        <div className="App">
+          <header className="App-header">
+            <div>
+              <img src={logoReact} className="rotateLogoReact" alt="logo" />
+            </div>
+            <h1 className="App-title">Chat made with<br />React-Firebase-Redux</h1>
+            <div>
+              <img src={logoReact} className="rotateLogoReact" alt="logo" />
+            </div>
+          </header>
+          <div className="ComponentContent">
+            <LoginComponent />
           </div>
-          <h1 className="App-title">Chat made with<br />React-Firebase-Redux</h1>
-        </header>
-        <p className="App-intro">
-          
-        </p>
-      </div>
+        </div>
+      </Provider>
     );
   }
 }

@@ -3,7 +3,9 @@
 }
 .rotateLogoReact {
   animation: App-logo-spin infinite 20s linear;
-  width: 140px;
+  width: 120px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .App-header {
   display: flex;
