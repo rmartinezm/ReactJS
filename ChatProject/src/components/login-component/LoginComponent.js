@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Button, Input,  Row, Col } from 'react-materialize';
 import './LoginComponent.css';
 
 class LoginComponent extends Component {
@@ -7,13 +8,13 @@ class LoginComponent extends Component {
     render () {
         return (
             <div>
-                <div className="container">
-                    <input className="textInput" type="text" placeholder="Full name"/>
-                    <input className="textInput" type="email" placeholder="Email"/>
-                    <input className="textInput" type="password" placeholder="Password"/>
-                    <input className="textInput" type="password" placeholder="Confirm Password"/>
-                </div>
-                <button className="signUpButton">Sign Up</button>                
+                <Row>
+                    <Input s={6} type="text" label="Full name"/>
+                    <Input s={6} type="email" label="Email"/>                                
+                    <Input s={6} type="password" label="Password"/>
+                    <Input s={6} type="password" label="Confirm Password"/>
+                </Row>
+                <Button className="signUpButton" waves='light'>Sign Up</Button>                
             </div>
         );
     }
