@@ -26,3 +26,28 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.accountText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 2;
+}
+.accountText p {
+  font-size: 16px;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
+.accountText::before,
+.accountText::after {
+  content: "";
+  flex: auto;
+  height: 0.1em;
+  display: block;
+}
+.accountText::before{
+  margin-right: 0.5em;
+  background: linear-gradient(to right, black, #74dbfd);
+}
+.accountText::after {
+  margin-left: 0.5em;  
+  background: linear-gradient(to left, black, #74dbfd);  
+}

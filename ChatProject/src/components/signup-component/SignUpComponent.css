@@ -1,3 +1,4 @@
+
 .content {
     display: flex;
     flex-wrap: wrap;
@@ -6,7 +7,7 @@
 .row .col.s9 {
     margin: auto !important;
 }
-.loginButton {
+.signUpButton {
     background-color: #74dbfd;
     height: 40px;
     width: 120px;
@@ -15,9 +16,9 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.loginButton:hover {
+.signUpButton:hover {
     background-color: #58cef1;    
 }
-.loginButton:focus {
+.signUpButton:focus {
     background-color: #90e5ff;    
 }

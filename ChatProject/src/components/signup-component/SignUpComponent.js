@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Button, Input,  Row } from 'react-materialize';
-import './LoginComponent.css';
+import './SignUpComponent.css';
 
-class LoginComponent extends Component {
+class SignUpComponent extends Component {
 
-    render(){
-        return(
+    render () {
+        return (
             <div>
                 <Row className="content">
+                    <Input s={9} type="text" label="Full name"/>
                     <Input s={9} type="email" label="Email"/>                                
                     <Input s={9} type="password" label="Password"/>
+                    <Input s={9} type="password" label="Confirm Password"/>
                 </Row>
-                <Button className="loginButton" waves='light'>Login</Button>  
+                <Button className="signUpButton" waves='light'>Sign Up</Button>                
             </div>
         );
     }
@@ -25,4 +27,4 @@ const mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps)(LoginComponent);
+export default connect(mapStateToProps)(SignUpComponent);
