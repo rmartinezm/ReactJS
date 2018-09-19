@@ -6,9 +6,18 @@ import configureStore from './store/configureStore';
 import logoReact from './assets/img/react-logo.png';
 import { Row, Col } from 'react-materialize';
 import './App.css';
+// Parse import
+import { config as reactParseConfig, setReactParseDispatch } from 'react-parse'
 
 // Inicialización del Store
 const store = configureStore();
+
+const APP_ID = "ReactDatabase";
+const MASTER_KEY = "ReactDatabase123456";
+const PARSE_SERVER = "http://localhost:1337/parse";
+const apiConfig = { baseURL: PARSE_SERVER, appId: APP_ID }
+reactParseConfig.init(apiConfig);
+setReactParseDispatch(store.dispatch);
 
 class App extends Component {
 
